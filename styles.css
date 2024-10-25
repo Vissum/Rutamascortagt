@@ -1,0 +1,191 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(to right, black, #070707, #302e2e, #4e4c4c);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1300px;
+}
+
+/* Título con efecto de máquina de escribir */
+.title {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px; /* Añadido para evitar superposición con el menú */
+}
+
+#title {
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+/* Menú de navegación */
+nav {
+    /*background-color: black;*/
+    height: 80px;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    position: fixed; 
+    top: 0; 
+    z-index: 1000;
+}
+
+nav .logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    display: flex;
+}
+
+nav .logo img {
+    padding: 10px;
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+nav ul {
+    margin-left: auto;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    margin: 0 5px;
+    border-radius: 3px;
+}
+
+nav a.active,
+nav a:hover {
+    background: rgb(107, 105, 107);
+    transition: .5s;
+}
+
+/* Estilos del menú lateral y mapa */
+.menu {
+    width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-right: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #e2e1e1;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #FEB602;
+    color: rgb(10, 10, 10);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #F4980A;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+.map {
+    position: relative;
+    flex: 1;
+    max-width: 600px;
+}
+
+#mapa {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+}
+
+#graphCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Efecto de máquina de escribir */
+.typewriter-title {
+    overflow: hidden;
+    border-right: .15em solid white;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+    max-width: fit-content;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
+
+/* Estilos adicionales */
+.umg {
+    padding: 10px;
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+    object-fit: contain;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruta más corta - Mapa de Guatemala</title>
+    <!-- Estilos y fuentes -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+</head>
+<body>
+
+    <!-- Efecto de máquina de escribir -->
+    <div class="title">
+        <h1 id="title" class="typewriter-title">Encuentra la ruta más rápida</h1>
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <label class="logo">
+            <img class="umg" src="logo.png" >
+            Proyecto Grupal
+        </label>
+    
+    </nav>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Menú lateral -->
+        <div class="menu">
+            <label for="start">Selecciona el punto de partida:</label>
+            <select id="start" name="start">
+                <option value="Alta Verapaz">Alta Verapaz</option>
+                <option value="Baja Verapaz">Baja Verapaz</option>
+                <option value="Chimaltenango">Chimaltenango</option>
+                <option value="Chiquimula">Chiquimula</option>
+                <option value="El Progreso">El Progreso</option>
+                <option value="Escuintla">Escuintla</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="Huehuetenango">Huehuetenango</option>
+                <option value="Izabal">Izabal</option>
+                <option value="Jalapa">Jalapa</option>
+                <option value="Jutiapa">Jutiapa</option>
+                <option value="Petén">Petén</option>
+                <option value="Quetzaltenango">Quetzaltenango</option>
+                <option value="Quiché">Quiché</option>
+                <option value="Retalhuleu">Retalhuleu</option>
+                <option value="Sacatepéquez">Sacatepéquez</option>
+                <option value="San Marcos">San Marcos</option>
+                <option value="Santa Rosa">Santa Rosa</option>
+                <option value="Sololá">Sololá</option>
+                <option value="Suchitepéquez">Suchitepéquez</option>
+                <option value="Totonicapán">Totonicapán</option>
+                <option value="Zacapa">Zacapa</option>
+            </select>
+
+            <label for="end">Selecciona el destino:</label>
+            <select id="end" name="end">
+                <option value="Alta Verapaz">Alta Verapaz</option>
+                <option value="Baja Verapaz">Baja Verapaz</option>
+                <option value="Chimaltenango">Chimaltenango</option>
+                <option value="Chiquimula">Chiquimula</option>
+                <option value="El Progreso">El Progreso</option>
+                <option value="Escuintla">Escuintla</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="Huehuetenango">Huehuetenango</option>
+                <option value="Izabal">Izabal</option>
+                <option value="Jalapa">Jalapa</option>
+                <option value="Jutiapa">Jutiapa</option>
+                <option value="Petén">Petén</option>
+                <option value="Quetzaltenango">Quetzaltenango</option>
+                <option value="Quiché">Quiché</option>
+                <option value="Retalhuleu">Retalhuleu</option>
+                <option value="Sacatepéquez">Sacatepéquez</option>
+                <option value="San Marcos">San Marcos</option>
+                <option value="Santa Rosa">Santa Rosa</option>
+                <option value="Sololá">Sololá</option>
+                <option value="Suchitepéquez">Suchitepéquez</option>
+                <option value="Totonicapán">Totonicapán</option>
+                <option value="Zacapa">Zacapa</option>
+            </select>
+
+            <button id="findRoute">Encontrar Ruta</button>
+
+            <div id="result">
+                <h2>Ruta más corta:</h2>
+                <p id="route"></p>
+                <p id="distance"></p>
+            </div>
+        </div>
+
+        <!-- Mapa -->
+        <div class="map">
+            <img src="image.png" alt="Mapa de Guatemala" id="mapa">
+            <canvas id="graphCanvas"></canvas>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
